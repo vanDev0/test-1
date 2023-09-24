@@ -1,8 +1,7 @@
-FROM ubuntu:22.04
-USER root
+FROM ubuntu:latest
 
-CMD ["apt", "install", "squid"]
-
-CMD ["sudo", "squid"]
+RUN apt-get update && apt-get install -y squid
 
 EXPOSE 3128
+
+CMD ["squid", "-f", "/etc/squid/squid.conf"]
