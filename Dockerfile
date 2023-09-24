@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && && apt-get install sysctl && apt-get install -y squid
+RUN apt-get update && apt-get install sysctl && apt-get install -y squid
 
 RUN sysctl -w net.ipv6.loopback=1
 
