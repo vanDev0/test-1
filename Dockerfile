@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y squid
 
-RUN eecho "dns_v4_first on" >> /etc/squid/squid.conf
+RUN echo "dns_v4_first on" >> /etc/squid/squid.conf
 RUN echo "http_port 127.0.0.1:3128" >> /etc/squid/squid.conf
 RUN echo "http_access allow all" >> /etc/squid/squid.conf
 
